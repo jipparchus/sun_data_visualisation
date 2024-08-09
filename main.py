@@ -30,7 +30,7 @@ mpl.rc('figure.subplot', left=0.12, right=0.95, bottom=0.2, top=0.9)
 
 def download_dataset_from_github_repo(local_path=os.path.join(HOME, 'aia_data'), repo_path='aia_data'):
     """ Download a direc from Github repo. """
-    api_url = f"https://api.github.com/repos/jipparchus/solar_visualisation/contents/{repo_path}"
+    api_url = f"https://api.github.com/repos/jipparchus/sun_data_visualisation/contents/{repo_path}"
     os.makedirs(local_path, exist_ok=True)
     response = requests.get(api_url)
     if response.status_code == 200:  # If success
