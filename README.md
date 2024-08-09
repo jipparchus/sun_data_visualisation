@@ -3,9 +3,11 @@ The main routine aims to demonstrate an example of visualising sun observation d
 
 SDO is a space mission launched in 2010 that observes the Sun 24/7. AIA/SDO is one of the instruments installed on SDO, and its observation is in continuous light and in the extreme ultraviolet (EUV) range.
 
-The data used here consist of Extreme Ultraviolet (EUV) observations at 171.1 nm, 19.3 nm, and 30.4 nm, mainly corresponding to plasma emissions at temperatures of 0.6 MK, 1.2 MK & 20 MK, and 0.05 MK, respectively. There are 26 observation data for each channel observed at different times from the 19th of July 2012, 07:30 (UT) to 07:45 (UT) of the same day with approximately 30-second intervals. The field of view and the observation date were selected so that the spatial and temporal window capture an excellent example of off-limb flares and a series of 'coronal rains' as flows of plasma blobs.
+The data used here consist of Extreme Ultraviolet (EUV) observations at 171.1 nm, 19.3 nm, and 30.4 nm, mainly corresponding to plasma emissions at temperatures of 0.6 MK, 1.2 MK & 20 MK, and 0.05 MK, respectively. There are 26 observation data for each channel observed at different times from the 19th of July 2012, 07:30 (UT) to 07:45 (UT) of the same day with approximately 30-second intervals. The zoomed-in field of view and the observation date were selected so that the spatial and temporal window capture an excellent example of off-limb flares and a series of 'coronal rains' as flows of plasma blobs.
 
-17.1 nm (0.6 MK) | 19.3 nm (1.2 MK & 20 MK) | 30.4 nm (0.05 MK)
+The solar corona's variation in 24 hours on the 19th July 2012, is seen in different channels, as shown below. The zoomed-in field of view is around the off-limb loops, which show a series of eruptions on the right-hand side, just below the equator.
+
+17.1 nm (600,000 K) | 19.3 nm (1,200,000 K & 20,000,000 K) | 30.4 nm (50,000 K)
 :-: | :-: | :-:
 <video src="https://github.com/user-attachments/assets/93ad1304-4817-4543-ab90-6b90a7f293f7" loop autoplay muted playsinline> | <video src="https://github.com/user-attachments/assets/32bf9d1a-d4a4-4478-9156-90f625af3279" loop autoplay muted playsinline> | <video loop autoplay muted playsinline src="https://github.com/user-attachments/assets/e9d2ecc0-582e-4356-9ddc-171eeafe5e48"/>
 
