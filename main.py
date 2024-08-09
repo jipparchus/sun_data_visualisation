@@ -235,6 +235,7 @@ def get_len_km(ds: DataSet, dist_arcsec):
 
 
 if __name__ == '__main__':
+    # If no dataset downloaded locally, download from github repository.
     if not os.path.exists(os.path.join(HOME, 'aia_data')):
         download_dataset_from_github_repo()
     # Show the plots on browser
@@ -250,6 +251,7 @@ if __name__ == '__main__':
         # Get the approximated length of the cutout path as L2 norm of p1-p0 vector
         dist_km = get_len_km(ds171, np.linalg.norm(p1 - p0, ord=2))
 
+        # Show binary image and cutout path selection
         c = '#1de95b'
         fig, axes = plt.subplots(1, 2, sharex='all', sharey='all')
         for ax, img, cmap in zip(axes.ravel(), [ds171.data_bi[:, :, 0], ds171.data_enhanced[:, :, 0]], ['gray', ds171.cmap]):
@@ -263,6 +265,7 @@ if __name__ == '__main__':
             ax.annotate('P1', p1, xytext=(0, -18), textcoords='offset points', bbox=dict(boxstyle="round", ec=c, fc="none"), c=c)
         html_path = fr'<h2>Sample path selection at 171 {u.AA} {ds171.dates[0]} (UT)</h2><img src={to_html_image(fig)}>'
 
+        # Time-distance plot to visualise flows of plasma blobs.
         fig, axes = plt.subplots(3, 1, sharex='all', sharey='all')
         fig.text(0.5, 0.0125, 'Date (UT)', ha='center', va='bottom', fontsize=10)
         fig.text(0.0125, 0.5, 'P0 to P1 Distance (km)', ha='left', va='center', rotation='vertical', fontsize=10)
@@ -280,6 +283,7 @@ if __name__ == '__main__':
             ax.set_xlim(ds304.dates_datetime[0], ds304.dates_datetime[-1])
         html_cutout = fr'<h2>Cutout time-distance plots at (171, 193, 304 {u.AA})</h2><img src={to_html_image(fig)}>'
 
+        # Merging all the html script.
         head1 = 'Solar Dynamics Observatory (SDO)'
         head2 = 'Atmospheric Imaging Assembly (AIA) data visualisation'
         html_0 = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">'
