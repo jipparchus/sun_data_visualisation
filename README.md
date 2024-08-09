@@ -7,7 +7,7 @@ The data used here consist of Extreme Ultraviolet (EUV) observations at 171.1 nm
 
 17.1 nm (0.6 MK) | 19.3 nm (1.2 MK & 20 MK) | 30.4 nm (0.05 MK)
 :-: | :-: | :-:
-<video src="https://github.com/user-attachments/assets/93ad1304-4817-4543-ab90-6b90a7f293f7" loop autoplay muted playsinline width=20/> | <video src="https://github.com/user-attachments/assets/32bf9d1a-d4a4-4478-9156-90f625af3279" loop autoplay muted playsinline width=20/> | <video loop autoplay muted playsinline src="https://github.com/user-attachments/assets/e9d2ecc0-582e-4356-9ddc-171eeafe5e48" width=20/>
+<video src="https://github.com/user-attachments/assets/93ad1304-4817-4543-ab90-6b90a7f293f7" loop autoplay muted playsinline> | <video src="https://github.com/user-attachments/assets/32bf9d1a-d4a4-4478-9156-90f625af3279" loop autoplay muted playsinline> | <video loop autoplay muted playsinline src="https://github.com/user-attachments/assets/e9d2ecc0-582e-4356-9ddc-171eeafe5e48"/>
 
 (videos were created through the [link](https://sdo.gsfc.nasa.gov/data/aiahmi/browse/queued.php))
 
@@ -24,7 +24,7 @@ The data used here consist of Extreme Ultraviolet (EUV) observations at 171.1 nm
 
 - Expected output of the code.
 
-<video src="https://github.com/user-attachments/assets/96d8da29-22a8-4040-847b-658775a1c5ca" loop autoplay muted playsinline width=20></video> 
+<video src="https://github.com/user-attachments/assets/96d8da29-22a8-4040-847b-658775a1c5ca" loop autoplay muted playsinline></video> 
 
 
 # Anaconda environment prep
@@ -32,7 +32,7 @@ The data used here consist of Extreme Ultraviolet (EUV) observations at 171.1 nm
 - Please set up the environment to run ``` main.py ``` by executing the below. The name of your environment, "foo", can be set to anything you like.
 
 ```bash
-conda env create -n foo -f requirement.yml
+conda env create -n foo -f conda_pip_env.yml
 ```
 ```bash
 conda activate foo
