@@ -5,6 +5,11 @@ SDO is a space mission launched in 2010 that observes the Sun 24/7. AIA/SDO is o
 
 The data used here consist of Extreme Ultraviolet (EUV) observations at 171.1 nm, 19.3 nm, and 30.4 nm, mainly corresponding to plasma emissions at temperatures of 0.6 MK, 1.2 MK & 20 MK, and 0.05 MK, respectively. There are 26 observation data for each channel observed at different times from the 19th of July 2012, 07:30 (UT) to 07:45 (UT) of the same day with approximately 30-second intervals. The field of view and the observation date were selected so that the spatial and temporal window capture an excellent example of off-limb flares and a series of 'coronal rains' as flows of plasma blobs.
 
+<video src="aia_171.mp4" controls="true" width="400"></video>
+<video src="aia_193.mp4" controls="true" width="400"></video>
+<video src="aia_304.mp4" controls="true" width="400"></video>
+
+(videos were created through the [link](https://sdo.gsfc.nasa.gov/data/aiahmi/browse/queued.php))
 
 # The main routine will ...
 
