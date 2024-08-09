@@ -98,7 +98,7 @@ class DataSet():
     def __init__(self, wavelength=304):
         self.wavelength = int(wavelength)
         self.cmap = AIACMAP[self.wavelength]
-        self.folder = os.path.join(HOME, 'aia_data', f'aia{wavelength}')
+        self.folder = os.path.join(HOME, 'aia_data', f"aia{wavelength}")
         self.load_fits()
         self.dates = [hdr['DATE-OBS'] for hdr in self.headers]
         self.dates_datetime = [datetime.strptime(dd, '%Y-%m-%dT%H:%M:%S.%f') for dd in self.dates]
@@ -278,16 +278,16 @@ if __name__ == '__main__':
             ax.xaxis.set_major_formatter(DateFormatter('%H:%M:%S'))
             ax.imshow(ds.time_distance, cmap=ds.cmap, origin='lower', extent=[ds.extent_td[0], ds.extent_td[1], 0, round(dist_km)], aspect='auto')
             ax.plot((t0, t1), (x0, x1), c='#4169e1', ls=':', lw=2, alpha=0.8)
-            ax.annotate(f'{round((x1 - x0) / (t1 - t0).seconds)} km/s', (t1, x1), xytext=(0, 0), textcoords='offset points',
+            ax.annotate(f"{round((x1 - x0) / (t1 - t0).seconds)} km/s", (t1, x1), xytext=(0, 0), textcoords='offset points',
                         bbox=dict(boxstyle="round", fc="w"), c='#4169e1')
             ax.set_xlim(ds304.dates_datetime[0], ds304.dates_datetime[-1])
         html_cutout = fr'<h2>Cutout time-distance plots at (171, 193, 304 {u.AA})</h2><img src={to_html_image(fig)}>'
 
-        # Merging all the html script.
+        # Merging all the html scripts.
         head1 = 'Solar Dynamics Observatory (SDO)'
         head2 = 'Atmospheric Imaging Assembly (AIA) data visualisation'
         html_0 = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">'
-        html_head = f'{html_0}<title>earthwave Python Challenge</title></head><body><h1>{head1}</h1><h1>{head2}</h1><article>'
+        html_head = f"{html_0}<title>earthwave Python Challenge</title></head><body><h1>{head1}</h1><h1>{head2}</h1><article>"
         html_imgs = ''
         for w, ds in zip(WAVELENGTHS, list_ds):
             buf = ds.generate_gif(ds.data, ds.data_blurred, ds.data_enhanced)
